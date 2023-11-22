@@ -1,10 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 if __name__ =='__main__':
-    s = "иинформаця"
-    for i in range(0, len(s), 2):
-        j = 1
-    p1 = s[i:i + j]
-    p2 = s[j:j + i]
-    s = p1 + p2 + p1
-    print(s)
+    def fix_word(word):
+        word_list = list(word)
+        i_index = word_list.index('и')
+        н_index = word_list.index('н')
+        ф_index = word_list.index('ф')
+        м_index = word_list.index('м')
+        а_index = word_list.index('а')
+        ц_index = word_list.index('ц')
+
+        word_list[i_index], word_list[н_index] = word_list[н_index], word_list[i_index]
+        word_list[ф_index], word_list[м_index] = word_list[м_index], word_list[ф_index]
+        word_list[а_index], word_list[ц_index] = word_list[ц_index], word_list[а_index]
+
+        fixed_word = ''.join(word_list)
+        return fixed_word
+
+
+        word = "иинформаця"
+
+        fixed_word = fix_word(word)
+        print("Исправленное слово:", fixed_word)
