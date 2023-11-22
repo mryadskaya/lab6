@@ -3,7 +3,7 @@
 if __name__=='__main__':
     r=input("введите предложение:")
     m=""
-    for i in range(len(r)):
+    for i, char in enumerate(r):
         if i%2==1:
             m+=r[i]
         else:
