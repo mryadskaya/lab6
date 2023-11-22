@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+
 if __name__ =='__main__':
-    def fix_word(word):
+        word = "иинформаця"
         word_list = list(word)
         i_index = word_list.index('и')
         н_index = word_list.index('н')
@@ -15,10 +17,4 @@ if __name__ =='__main__':
         word_list[а_index], word_list[ц_index] = word_list[ц_index], word_list[а_index]
 
         fixed_word = ''.join(word_list)
-        return fixed_word
-
-
-        word = "иинформаця"
-
-        fixed_word = fix_word(word)
         print("Исправленное слово:", fixed_word)
